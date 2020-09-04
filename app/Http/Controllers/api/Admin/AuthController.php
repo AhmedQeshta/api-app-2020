@@ -5,11 +5,16 @@ namespace App\Http\Controllers\api\Admin;
 use App\Http\Controllers\Controller;
 use App\Triads\GeneralTriads;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Validator;
+//use Auth;
+use App\Models\Admin;
 
 class AuthController extends Controller
 {
     use GeneralTriads;
-    public function login(Request $request){
+    public function login(Request $request)
+    {
 
         try {
             $rules = [
@@ -42,6 +47,7 @@ class AuthController extends Controller
         }catch (\Exception $ex){
             return $this->returnError($ex->getCode(), $ex->getMessage());
         }
+
 
 
     }

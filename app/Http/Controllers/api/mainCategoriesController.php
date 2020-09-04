@@ -38,7 +38,7 @@ class mainCategoriesController extends Controller
     }
 
     public function offers(){
-
+        return $this ->returnSuccessMessage('WoW , login successfully','201');
     }
 
     /**
